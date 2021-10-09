@@ -1,0 +1,192 @@
+$header-white: #F6F6F6;
+$font-black: #000000;
+
+body {
+  font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho",
+"ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E",
+"ＭＳ Ｐ明朝", "MS PMincho", serif, "Noto Serif JP";
+  font-size: 16px;
+  width: 100vw;
+  max-width: 1920px;
+}
+
+header {
+  z-index: 10;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  color: $header-white;
+  font-weight: 800;
+  .header-logo {
+    width: 200px;
+    height: 40px;
+    margin-left: 20px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .header-menu {
+    line-height: calc(42/16);
+    margin-left: 90px;
+    ul {
+      display: flex;
+      li {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  .header-reserve {
+    margin-left: auto;
+    &__btn {
+      width: 170px;
+      height: 54px;
+      margin-right: 20px;
+      background-color: #978F10;
+      display: flex;
+      align-items: center;
+      img {
+        margin-left: 37px;
+      }
+      &-text {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.first-view {
+  height: 1079px;
+  width: 100%;
+  p {
+    height: 100%;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-size: 2.125rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: calc(42/34);
+    letter-spacing: 10px;
+    position: absolute;
+    top: 361px;
+    left: 1293px;
+    span {
+      display: block;
+      margin-right: 43px;
+    }
+  }
+  &__img {
+    height: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.top-concept {
+  width: 100%;
+  height: 681px;
+  background-image: url(../img/background/bg.png);
+  background-size: cover;
+  &__box {
+    font-weight: normal;
+    height: 100%;
+    width: 62%;
+    max-width: 1180px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin:  0 auto;
+    h2 {
+      margin-right: 101px;
+      margin-top: 64px;
+      font-size: 1.75rem;
+      line-height: 1.5;
+      letter-spacing: 0.6em;
+      color: $font-black;
+      span {
+        display: block;
+        margin-right: 19px;
+        margin-top: 85px;
+      }
+    }
+    p {
+      letter-spacing: 0.35em;
+      margin-top: 149px;
+      margin-right: 112px;
+      line-height: 1.375;
+      span {
+        display: block;
+        margin-right: 16px;
+      }
+    }
+  }
+  .signature {
+    margin-top: 443px;
+    margin-right: 110px;
+    font-size: 1.35rem;
+    line-height: 1.45;
+  }
+}
+
+.top-menu {
+  width: 100%;
+  height: 2063px;
+  .menu-one {
+    margin-top: 106px !important;
+  }
+  &__content {
+    display: flex;
+    width: 100%;
+    font-weight: normal;
+    margin-top: 122px;
+    .left-img {
+      margin-top: 19px;
+      margin-left: 137px;
+    }
+    .right-btn {
+      margin-top: 67px;
+    }
+    .left-btn {
+      margin-top: 35px;
+    }
+    .center-img {
+      margin-left: auto;
+      margin-right: 210px;
+    }
+    img {
+      width: 1050px;
+      height: 545px;
+    }
+    &-text {
+      color: $font-black;
+      h2 {
+        font-size: 2.25rem;
+        line-height: 1.72;
+      }
+      p{
+        line-height: 2;
+        font-size: 1rem;
+        margin-top: 54px;
+      }
+    }
+  }
+}
+
+.about-btn {
+  display: flex;
+  width: 200px;
+  height: 56px;
+  align-items: center;
+  border: solid 1px #707070;
+  span {
+    display: block;
+    margin: 0 auto;
+  }
+}

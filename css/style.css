@@ -1,0 +1,236 @@
+@charset "UTF-8";
+body {
+  font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif, "Noto Serif JP";
+  font-size: 16px;
+  width: 100vw;
+  max-width: 1920px;
+}
+
+header {
+  z-index: 10;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #F6F6F6;
+  font-weight: 800;
+}
+
+header .header-logo {
+  width: 200px;
+  height: 40px;
+  margin-left: 20px;
+}
+
+header .header-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+header .header-menu {
+  line-height: calc(42/16);
+  margin-left: 90px;
+}
+
+header .header-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header-menu ul li {
+  margin-left: 30px;
+}
+
+header .header-reserve {
+  margin-left: auto;
+}
+
+header .header-reserve__btn {
+  width: 170px;
+  height: 54px;
+  margin-right: 20px;
+  background-color: #978F10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-reserve__btn img {
+  margin-left: 37px;
+}
+
+header .header-reserve__btn-text {
+  margin-left: 10px;
+}
+
+.first-view {
+  height: 1079px;
+  width: 100%;
+}
+
+.first-view p {
+  height: 100%;
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+          writing-mode: vertical-rl;
+  font-size: 2.125rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: calc(42/34);
+  letter-spacing: 10px;
+  position: absolute;
+  top: 361px;
+  left: 1293px;
+}
+
+.first-view p span {
+  display: block;
+  margin-right: 43px;
+}
+
+.first-view__img {
+  height: 100%;
+  overflow: hidden;
+}
+
+.first-view__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.top-concept {
+  width: 100%;
+  height: 681px;
+  background-image: url(../img/background/bg.png);
+  background-size: cover;
+}
+
+.top-concept__box {
+  font-weight: normal;
+  height: 100%;
+  width: 62%;
+  max-width: 1180px;
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+  margin: 0 auto;
+}
+
+.top-concept__box h2 {
+  margin-right: 101px;
+  margin-top: 64px;
+  font-size: 1.75rem;
+  line-height: 1.5;
+  letter-spacing: 0.6em;
+  color: #000000;
+}
+
+.top-concept__box h2 span {
+  display: block;
+  margin-right: 19px;
+  margin-top: 85px;
+}
+
+.top-concept__box p {
+  letter-spacing: 0.35em;
+  margin-top: 149px;
+  margin-right: 112px;
+  line-height: 1.375;
+}
+
+.top-concept__box p span {
+  display: block;
+  margin-right: 16px;
+}
+
+.top-concept .signature {
+  margin-top: 443px;
+  margin-right: 110px;
+  font-size: 1.35rem;
+  line-height: 1.45;
+}
+
+.top-menu {
+  width: 100%;
+  height: 2063px;
+}
+
+.top-menu .menu-one {
+  margin-top: 106px !important;
+}
+
+.top-menu__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  font-weight: normal;
+  margin-top: 122px;
+}
+
+.top-menu__content .left-img {
+  margin-top: 19px;
+  margin-left: 137px;
+}
+
+.top-menu__content .right-btn {
+  margin-top: 67px;
+}
+
+.top-menu__content .left-btn {
+  margin-top: 35px;
+}
+
+.top-menu__content .center-img {
+  margin-left: auto;
+  margin-right: 210px;
+}
+
+.top-menu__content img {
+  width: 1050px;
+  height: 545px;
+}
+
+.top-menu__content-text {
+  color: #000000;
+}
+
+.top-menu__content-text h2 {
+  font-size: 2.25rem;
+  line-height: 1.72;
+}
+
+.top-menu__content-text p {
+  line-height: 2;
+  font-size: 1rem;
+  margin-top: 54px;
+}
+
+.about-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  height: 56px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid 1px #707070;
+}
+
+.about-btn span {
+  display: block;
+  margin: 0 auto;
+}
