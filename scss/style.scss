@@ -58,9 +58,13 @@ header {
   }
 }
 
+section {
+  width: 100%;
+}
+
+// セクションファーストビュー
 .first-view {
   height: 1079px;
-  width: 100%;
   p {
     height: 100%;
     -ms-writing-mode: tb-rl;
@@ -89,8 +93,8 @@ header {
   }
 }
 
+// セクションコンセプト
 .top-concept {
-  width: 100%;
   height: 681px;
   background-image: url(../img/background/bg.png);
   background-size: cover;
@@ -135,9 +139,10 @@ header {
   }
 }
 
+// セクショントップメニュー
 .top-menu {
-  width: 100%;
-  height: 2063px;
+  height: auto;
+  margin-bottom: 78px;
   .menu-one {
     margin-top: 106px !important;
   }
@@ -179,6 +184,7 @@ header {
   }
 }
 
+// メニューボタン
 .about-btn {
   display: flex;
   width: 200px;
@@ -189,4 +195,131 @@ header {
     display: block;
     margin: 0 auto;
   }
+}
+
+.logo {
+  margin-top: 60px;
+}
+
+// セクションプラン
+.top-plan {
+  height: 777px;
+  background-image: url(../img/background/bg02.png);
+  color: $font-black;
+  &__content {
+    height: 100%;
+    width: auto;
+    margin: auto 0;
+    text-align: center;
+    h2 {
+      margin-top: 24px;
+      font-size: 2.25rem;
+      line-height: 0.88;
+    }
+    &-flexbox {
+      display: flex;
+      justify-content: center;
+      margin-top: 66px;
+      .plan-box {
+          width: 331px;
+          margin-right: 94px;
+        &__img {
+          height: 209px;
+          width: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        h3 {
+          font-size: 1.25rem;
+          line-height: 1.6;
+          font-weight: 100;
+          margin-top: 26px;
+        }
+        p {
+          line-height: 2;
+          margin-top: 18px;
+        }
+      }
+    }
+  }
+}
+
+// マージンライトclear
+.margin-clear {
+  margin-right: 0 !important;
+}
+
+//セクションinfo
+.top-info {
+  color: $font-black;
+  margin-bottom: 60px;
+  &__content {
+    height: 697px;
+    width: 1180px;
+    text-align: center;
+    margin: auto;
+    h2 {
+      margin-top: 24px;
+      font-size: 2.25rem;
+      line-height: 0.88;
+    }
+    .tab-menu {
+      line-height: 1;
+      margin-top: 44px;
+      ul {
+        display: flex;
+        justify-content: center;
+        li {
+          margin-right: 53px;
+        }
+        .active {
+          border-bottom: solid 1px #707070;
+        }
+      }
+    }
+    &-list {
+      margin-top: 28.5px;
+      ul {
+        display: none;
+        li {
+          width: 570px;
+          height: 130px;
+          margin-top: 20px;
+          background-color: #F6F6F6;
+          display: flex;
+          text-align: left;
+          img {
+            width: 103px;
+            height: 100px;
+            margin-left: 10px;
+            margin-top: 15px;
+          }
+          p {
+            margin-left: 30px;
+            margin-right: 39px;
+          }
+        }
+      }
+      .date {
+        font-size: 0.875rem;
+        line-height: 2.285;
+        margin-top: 6px;
+      }
+      .text {
+        line-height: 2;
+      }
+      .show {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.top-access {
+  height: 1381px;
+  background-image: url(../img/background/bg-access.png);
 }
