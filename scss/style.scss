@@ -322,4 +322,56 @@ section {
 .top-access {
   height: 1381px;
   background-image: url(../img/background/bg-access.png);
+  &__content {
+    text-align: center;
+    h2 {
+      margin-top: 24px;
+      font-size: 2.25rem;
+      line-height: 0.88;
+    }
+    .infomation {
+      display: flex;
+      margin-top: 84px;
+      margin-left: 370px;
+      img {
+        width: 666px;
+        height: 370px;
+      }
+      address {
+        text-align: left;
+        margin-left: 83px;
+        margin-top: 4px;
+        line-height: 2;
+        h3 {
+          font-weight: 800;
+          margin-top: 8px;
+        }
+        .address-title {
+          margin-top: 0;
+        }
+        p {
+          margin-top: 8px;
+        }
+      }
+    }
+    .map {
+      margin-top: 69px;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 582px;
+  text-align: center;
+  .footer {
+    height: 522px;
+    background-image: url(../img/background/bg3.png);
+  }
+  .footer-copyright {
+    font-size: 0.75rem;
+    color: #FFFFFF;
+    background-color: #000000;
+    height: 60px;
+  }
 }
