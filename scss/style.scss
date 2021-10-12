@@ -367,11 +367,46 @@ footer {
   .footer {
     height: 522px;
     background-image: url(../img/background/bg3.png);
+    &-menu {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      padding-top: 64px;
+      font-size: 1.125rem;
+      line-height: 1.777;
+      li {
+        writing-mode: vertical-rl;
+        margin-right: 20px;
+        letter-spacing: 15px;
+      }
+    }
+    &-address {
+      margin-top: 72px;
+      address {
+        ul {
+          display: flex;
+          justify-content: center;
+          li {
+            margin-right: 20px;
+          }
+        }
+        .address-info {
+          letter-spacing: 0.18em;
+        }
+        .phone-info {
+          margin-top: 23px;
+        }
+      }
+    }
   }
   .footer-copyright {
     font-size: 0.75rem;
+    line-height: 2;
     color: #FFFFFF;
     background-color: #000000;
     height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
