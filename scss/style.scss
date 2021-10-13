@@ -1,13 +1,18 @@
 $header-white: #F6F6F6;
 $font-black: #000000;
+$max-width: 1920px;
+
+// %指定関数(仕様px / 親要素px)
+@function ratioAsk($margin-num, $parent-px) {
+  @return ($margin-num / $parent-px * 100%);
+}
 
 body {
   font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho",
 "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E",
 "ＭＳ Ｐ明朝", "MS PMincho", serif, "Noto Serif JP";
   font-size: 16px;
-  width: 100vw;
-  max-width: 1920px;
+  max-width: $max-width;
 }
 
 header {
@@ -63,8 +68,10 @@ section {
 }
 
 // セクションファーストビュー
+$first-view-height: 1079px;
 .first-view {
-  height: 1079px;
+  height: $first-view-height;
+  position: relative;
   p {
     height: 100%;
     -ms-writing-mode: tb-rl;
@@ -72,11 +79,11 @@ section {
     font-size: 2.125rem;
     font-weight: 800;
     color: #FFFFFF;
-    line-height: calc(42/34);
+    line-height: 1.235;
     letter-spacing: 10px;
     position: absolute;
-    top: 361px;
-    left: 1293px;
+    top: ratioAsk(361px, $first-view-height);
+    left: ratioAsk(1285px, $max-width);
     span {
       display: block;
       margin-right: 43px;
@@ -94,35 +101,37 @@ section {
 }
 
 // セクションコンセプト
+$top-concept-height: 681px;
+$top-concept-box-width: 1180px;
 .top-concept {
-  height: 681px;
+  height: $top-concept-height;
   background-image: url(../img/background/bg.png);
   background-size: cover;
   &__box {
     font-weight: normal;
     height: 100%;
     width: 62%;
-    max-width: 1180px;
+    max-width: $top-concept-box-width;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     text-orientation: upright;
     margin:  0 auto;
     h2 {
-      margin-right: 101px;
-      margin-top: 64px;
+      margin-top: ratioAsk(64px, $top-concept-height);
+      margin-right: ratioAsk(101px, $top-concept-height);
       font-size: 1.75rem;
       line-height: 1.5;
       letter-spacing: 0.6em;
       color: $font-black;
       span {
         display: block;
+        margin-top: ratioAsk(85px, $top-concept-height);
         margin-right: 19px;
-        margin-top: 85px;
       }
     }
     p {
       letter-spacing: 0.35em;
-      margin-top: 149px;
+      margin-top: ratioAsk(149px, $top-concept-height);
       margin-right: 112px;
       line-height: 1.375;
       span {
@@ -132,7 +141,7 @@ section {
     }
   }
   .signature {
-    margin-top: 443px;
+    margin-top: ratioAsk(443px, $top-concept-height);
     margin-right: 110px;
     font-size: 1.35rem;
     line-height: 1.45;
@@ -140,20 +149,23 @@ section {
 }
 
 // セクショントップメニュー
+$top-menu-height: 1905px;
 .top-menu {
-  height: auto;
+  height: $top-menu-height;
+  width: 100%;
   margin-bottom: 78px;
   .menu-one {
-    margin-top: 106px !important;
+    margin-top: ratioAsk(106px, $top-menu-height) !important;
   }
   &__content {
-    display: flex;
     width: 100%;
+    height: ratioAsk(545px, $top-menu-height);
+    display: flex;
     font-weight: normal;
-    margin-top: 122px;
+    margin-top: ratioAsk(122px, $top-menu-height);
     .left-img {
       margin-top: 19px;
-      margin-left: 137px;
+      margin-left: ratioAsk(137px, $max-width);
     }
     .right-btn {
       margin-top: 67px;
@@ -163,11 +175,12 @@ section {
     }
     .center-img {
       margin-left: auto;
-      margin-right: 210px;
+      margin-right: ratioAsk(210px, $max-width);
     }
     img {
-      width: 1050px;
-      height: 545px;
+      width: 54.6875%;
+      height: 100%;
+      object-fit: cover;
     }
     &-text {
       color: $font-black;
@@ -178,7 +191,7 @@ section {
       p{
         line-height: 2;
         font-size: 1rem;
-        margin-top: 54px;
+        margin-top: ratioAsk(54px, 545px);
       }
     }
   }
@@ -202,8 +215,9 @@ section {
 }
 
 // セクションプラン
+$top-plan-height: 777px;
 .top-plan {
-  height: 777px;
+  height: $top-plan-height;
   background-image: url(../img/background/bg02.png);
   color: $font-black;
   &__content {
@@ -219,9 +233,9 @@ section {
     &-flexbox {
       display: flex;
       justify-content: center;
-      margin-top: 66px;
+      margin-top: ratioAsk(66px, $max-width);
       .plan-box {
-          width: 331px;
+          width: ratioAsk(331px, $max-width);
           margin-right: 94px;
         &__img {
           height: 209px;
@@ -229,6 +243,7 @@ section {
           img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
           }
         }
         h3 {
