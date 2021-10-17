@@ -1,0 +1,8 @@
+$header-white: #F6F6F6;
+$font-black: #000000;
+$max-width: 1920px;
+
+// %指定関数(仕様px / 親要素px)
+@function ratioAsk($margin-num, $parent-px) {
+  @return ($margin-num / $parent-px * 100%);
+}

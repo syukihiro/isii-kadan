@@ -55,6 +55,7 @@ header .header-reserve__btn {
   height: 54px;
   margin-right: 20px;
   background-color: #978F10;
+  color: #F6F6F6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,12 +72,18 @@ header .header-reserve__btn-text {
   margin-left: 10px;
 }
 
+.header-active {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
 section {
   width: 100%;
 }
 
 .first-view {
-  height: 1079px;
+  height: 100vh;
+  max-height: 1079px;
   position: relative;
 }
 
@@ -113,7 +120,8 @@ section {
 }
 
 .top-concept {
-  height: 681px;
+  height: auto;
+  max-height: 681px;
   background-image: url(../img/background/bg.png);
   background-size: cover;
 }
@@ -122,7 +130,7 @@ section {
   font-weight: normal;
   height: 100%;
   width: 62%;
-  max-width: 1180px;
+  min-width: 1180px;
   -ms-writing-mode: tb-rl;
   -webkit-writing-mode: vertical-rl;
           writing-mode: vertical-rl;
@@ -165,13 +173,14 @@ section {
 }
 
 .top-menu {
-  height: 1905px;
+  height: 128.9375rem;
   width: 100%;
-  margin-bottom: 78px;
+  padding-bottom: 4.0625%;
 }
 
 .top-menu .menu-one {
-  margin-top: 5.5643% !important;
+  padding-top: 5.5643% !important;
+  margin-top: 0;
 }
 
 .top-menu__content {
@@ -242,7 +251,7 @@ section {
 }
 
 .logo {
-  margin-top: 60px;
+  margin-top: 3.125%;
 }
 
 .top-plan {
@@ -253,8 +262,9 @@ section {
 
 .top-plan__content {
   height: 100%;
-  width: auto;
-  margin: auto 0;
+  width: 62%;
+  min-width: 1180px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -275,12 +285,12 @@ section {
 }
 
 .top-plan__content-flexbox .plan-box {
-  width: 17.23958%;
-  margin-right: 94px;
+  margin-right: 4.89583%;
+  text-align: left;
 }
 
 .top-plan__content-flexbox .plan-box__img {
-  height: 209px;
+  height: auto;
   width: 100%;
 }
 
@@ -295,7 +305,7 @@ section {
   font-size: 1.25rem;
   line-height: 1.6;
   font-weight: 100;
-  margin-top: 26px;
+  margin-top: 1.35417%;
 }
 
 .top-plan__content-flexbox .plan-box p {
@@ -309,12 +319,13 @@ section {
 
 .top-info {
   color: #000000;
-  margin-bottom: 60px;
+  margin-bottom: 3.125%;
 }
 
 .top-info__content {
   height: 697px;
-  width: 1180px;
+  width: 61.45833%;
+  min-width: 1180px;
   text-align: center;
   margin: auto;
 }
@@ -356,9 +367,9 @@ section {
 }
 
 .top-info__content-list ul li {
-  width: 570px;
+  width: 48.30508%;
   height: 130px;
-  margin-top: 20px;
+  margin-top: 1.69492%;
   background-color: #F6F6F6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -366,16 +377,20 @@ section {
   text-align: left;
 }
 
+.top-info__content-list ul li .box {
+  width: 100%;
+}
+
 .top-info__content-list ul li img {
-  width: 103px;
-  height: 100px;
-  margin-left: 10px;
-  margin-top: 15px;
+  width: 18.07018%;
+  height: 76.92308%;
+  margin-left: 1.75439%;
+  margin-top: 2.63158%;
 }
 
 .top-info__content-list ul li p {
-  margin-left: 30px;
-  margin-right: 39px;
+  margin-left: 5.26316%;
+  margin-right: 6.84211%;
 }
 
 .top-info__content-list .date {
@@ -405,31 +420,40 @@ section {
 }
 
 .top-access__content {
+  width: 100%;
+  height: 100%;
   text-align: center;
 }
 
 .top-access__content h2 {
-  margin-top: 24px;
+  margin-top: 1.25%;
   font-size: 2.25rem;
   line-height: 0.88;
 }
 
 .top-access__content .infomation {
+  height: 26.79218%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 84px;
-  margin-left: 370px;
+  margin-top: 4.375%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .top-access__content .infomation img {
-  width: 666px;
-  height: 370px;
+  width: 43.30564%;
+  max-width: 656px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .top-access__content .infomation address {
   text-align: left;
-  margin-left: 83px;
+  margin-left: 5.39695%;
   margin-top: 4px;
   line-height: 2;
 }
@@ -448,7 +472,16 @@ section {
 }
 
 .top-access__content .map {
-  margin-top: 69px;
+  height: 42.86749%;
+  max-height: 592px;
+  width: 100%;
+  margin-top: 3.59375%;
+}
+
+.top-access__content .map iframe {
+  height: 100%;
+  width: 41.25%;
+  min-width: 792px;
 }
 
 footer {
@@ -458,7 +491,7 @@ footer {
 }
 
 footer .footer {
-  height: 522px;
+  height: 89.69072%;
   background-image: url(../img/background/bg3.png);
 }
 
@@ -472,7 +505,7 @@ footer .footer-menu {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  padding-top: 64px;
+  padding-top: 3.33333%;
   font-size: 1.125rem;
   line-height: 1.777;
 }
@@ -486,7 +519,7 @@ footer .footer-menu li {
 }
 
 footer .footer-address {
-  margin-top: 72px;
+  margin-top: 3.75%;
 }
 
 footer .footer-address address ul {

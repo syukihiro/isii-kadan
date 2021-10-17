@@ -1,11 +1,4 @@
-$header-white: #F6F6F6;
-$font-black: #000000;
-$max-width: 1920px;
-
-// %指定関数(仕様px / 親要素px)
-@function ratioAsk($margin-num, $parent-px) {
-  @return ($margin-num / $parent-px * 100%);
-}
+@import "model";
 
 body {
   font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho",
@@ -51,6 +44,7 @@ header {
       height: 54px;
       margin-right: 20px;
       background-color: #978F10;
+      color: $header-white;
       display: flex;
       align-items: center;
       img {
@@ -63,6 +57,11 @@ header {
   }
 }
 
+.header-active {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
 section {
   width: 100%;
 }
@@ -70,7 +69,8 @@ section {
 // セクションファーストビュー
 $first-view-height: 1079px;
 .first-view {
-  height: $first-view-height;
+  height: 100vh;
+  max-height: $first-view-height;
   position: relative;
   p {
     height: 100%;
@@ -104,18 +104,19 @@ $first-view-height: 1079px;
 $top-concept-height: 681px;
 $top-concept-box-width: 1180px;
 .top-concept {
-  height: $top-concept-height;
+  height: auto;
+  max-height: $top-concept-height;
   background-image: url(../img/background/bg.png);
   background-size: cover;
   &__box {
     font-weight: normal;
     height: 100%;
     width: 62%;
-    max-width: $top-concept-box-width;
+    min-width: $top-concept-box-width;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    margin:  0 auto;
+    margin: 0 auto;
     h2 {
       margin-top: ratioAsk(64px, $top-concept-height);
       margin-right: ratioAsk(101px, $top-concept-height);
@@ -149,20 +150,21 @@ $top-concept-box-width: 1180px;
 }
 
 // セクショントップメニュー
-$top-menu-height: 1905px;
+$top-menu-height: 128.9375rem;
 .top-menu {
   height: $top-menu-height;
   width: 100%;
-  margin-bottom: 78px;
+  padding-bottom: ratioAsk(78px, $max-width);
   .menu-one {
-    margin-top: ratioAsk(106px, $top-menu-height) !important;
+    padding-top: 5.5643% !important;
+    margin-top: 0;
   }
   &__content {
     width: 100%;
-    height: ratioAsk(545px, $top-menu-height);
+    height: 28.60892%;
     display: flex;
     font-weight: normal;
-    margin-top: ratioAsk(122px, $top-menu-height);
+    margin-top: 6.4042%;
     .left-img {
       margin-top: 19px;
       margin-left: ratioAsk(137px, $max-width);
@@ -211,7 +213,7 @@ $top-menu-height: 1905px;
 }
 
 .logo {
-  margin-top: 60px;
+  margin-top: ratioAsk(60px, $max-width);
 }
 
 // セクションプラン
@@ -222,8 +224,9 @@ $top-plan-height: 777px;
   color: $font-black;
   &__content {
     height: 100%;
-    width: auto;
-    margin: auto 0;
+    width: 62%;
+    min-width: 1180px;
+    margin: 0 auto;
     text-align: center;
     h2 {
       margin-top: 24px;
@@ -235,10 +238,10 @@ $top-plan-height: 777px;
       justify-content: center;
       margin-top: ratioAsk(66px, $max-width);
       .plan-box {
-          width: ratioAsk(331px, $max-width);
-          margin-right: 94px;
+          margin-right: ratioAsk(94px, $max-width);
+          text-align: left;
         &__img {
-          height: 209px;
+          height: auto;
           width: 100%;
           img {
             width: 100%;
@@ -250,7 +253,7 @@ $top-plan-height: 777px;
           font-size: 1.25rem;
           line-height: 1.6;
           font-weight: 100;
-          margin-top: 26px;
+          margin-top: ratioAsk(26px, $max-width);
         }
         p {
           line-height: 2;
@@ -267,12 +270,15 @@ $top-plan-height: 777px;
 }
 
 //セクションinfo
+$top-info-height: 697px;
+$top-info-content-width: 1180px;
 .top-info {
   color: $font-black;
-  margin-bottom: 60px;
+  margin-bottom: ratioAsk(60px, $max-width);
   &__content {
-    height: 697px;
-    width: 1180px;
+    height: $top-info-height;
+    width: ratioAsk($top-info-content-width, $max-width);
+    min-width: $top-info-content-width;
     text-align: center;
     margin: auto;
     h2 {
@@ -299,21 +305,24 @@ $top-plan-height: 777px;
       ul {
         display: none;
         li {
-          width: 570px;
+          width: ratioAsk(570px, $top-info-content-width);
           height: 130px;
-          margin-top: 20px;
+          margin-top: ratioAsk(20px, $top-info-content-width);
           background-color: #F6F6F6;
           display: flex;
           text-align: left;
+          .box {
+            width: 100%;
+          }
           img {
-            width: 103px;
-            height: 100px;
-            margin-left: 10px;
-            margin-top: 15px;
+            width: ratioAsk(103px, 570px);
+            height: ratioAsk(100px, 130px);
+            margin-left: ratioAsk(10px, 570px);
+            margin-top: ratioAsk(15px, 570px);
           }
           p {
-            margin-left: 30px;
-            margin-right: 39px;
+            margin-left: ratioAsk(30px, 570px);
+            margin-right: ratioAsk(39px, 570px);
           }
         }
       }
@@ -334,27 +343,34 @@ $top-plan-height: 777px;
   }
 }
 
+$top-access-height: 1381px;
 .top-access {
-  height: 1381px;
+  height: $top-access-height;
   background-image: url(../img/background/bg-access.png);
   &__content {
+    width: 100%;
+    height: 100%;
     text-align: center;
     h2 {
-      margin-top: 24px;
+      margin-top: ratioAsk(24px, $max-width);
       font-size: 2.25rem;
       line-height: 0.88;
     }
     .infomation {
+      height: ratioAsk(370px, $top-access-height);
+      width: 100%;
       display: flex;
-      margin-top: 84px;
-      margin-left: 370px;
+      margin-top: ratioAsk(84px, $max-width);
+      justify-content: center;
       img {
-        width: 666px;
-        height: 370px;
+        width: ratioAsk(666px, 1537.906px);
+        max-width: 656px;
+        height: 100%;
+        object-fit: cover;
       }
       address {
         text-align: left;
-        margin-left: 83px;
+        margin-left: ratioAsk(83px, 1537.906px);
         margin-top: 4px;
         line-height: 2;
         h3 {
@@ -370,23 +386,32 @@ $top-plan-height: 777px;
       }
     }
     .map {
-      margin-top: 69px;
+      height: ratioAsk(592px, $top-access-height);
+      max-height: 592px;
+      width: 100%;
+      margin-top: ratioAsk(69px, $max-width);
+      iframe {
+        height: 100%;
+        width: 41.25%;
+        min-width: 792px;
+      }
     }
   }
 }
 
+$footer-height: 582px;
 footer {
   width: 100%;
-  height: 582px;
+  height: $footer-height;
   text-align: center;
   .footer {
-    height: 522px;
+    height: ratioAsk(522px, $footer-height);
     background-image: url(../img/background/bg3.png);
     &-menu {
       display: flex;
       justify-content: center;
       align-items: baseline;
-      padding-top: 64px;
+      padding-top: ratioAsk(64px, $max-width);
       font-size: 1.125rem;
       line-height: 1.777;
       li {
@@ -396,7 +421,7 @@ footer {
       }
     }
     &-address {
-      margin-top: 72px;
+      margin-top: ratioAsk(72px, $max-width);
       address {
         ul {
           display: flex;
