@@ -402,11 +402,13 @@ $top-access-height: 1381px;
 $footer-height: 582px;
 footer {
   width: 100%;
-  height: $footer-height;
+  height: auto;
+  max-height: $footer-height;
   text-align: center;
   .footer {
     height: ratioAsk(522px, $footer-height);
     background-image: url(../img/background/bg3.png);
+    padding-bottom: ratioAsk(61px, $max-width);
     &-menu {
       display: flex;
       justify-content: center;

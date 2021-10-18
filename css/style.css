@@ -486,13 +486,15 @@ section {
 
 footer {
   width: 100%;
-  height: 582px;
+  height: auto;
+  max-height: 582px;
   text-align: center;
 }
 
 footer .footer {
   height: 89.69072%;
   background-image: url(../img/background/bg3.png);
+  padding-bottom: 3.17708%;
 }
 
 footer .footer-menu {
