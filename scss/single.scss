@@ -18,6 +18,12 @@ $single-firstview-height: 36.25rem;
     font-weight: 600;
   }
 }
+.cook-img {
+  background-image: url(../img/header/menu-header.png);
+}
+.hotspring-img {
+  background-image: url(../img/header/onsen-header.png);
+}
 // パンクず
 .breadcrumbs {
   width: 100%;
@@ -97,6 +103,42 @@ $single-width: 73.75rem;
           padding-left: 60px;
         }
       }
+    }
+  }
+}
+
+//温泉ページ用
+.effect {
+  margin-top: ratioAsk(156.5px, $max-width);
+  border-top: solid 1px #E7E7E7;
+  border-bottom: solid 1px #E7E7E7;
+  text-align: center;
+  h2 {
+    font-size: 1.625rem;
+    line-height: 1.23;
+    padding-top: ratioAsk(92.5px, $max-width);
+  }
+  &-box {
+    height: auto;
+    width: 74.576%;
+    margin: ratioAsk(48.5px, 1180px) auto ratioAsk(74px, 1180px);
+    &__content {
+      font-size: 0.9375rem;
+      line-height: 2.133333;
+      display: flex;
+      text-align: left;
+      padding: 9px 0 9px 0;
+      border-top: solid 1px #E7E7E7;
+      h3 {
+        width: ratioAsk(60px, 880px);
+        white-space: nowrap;
+      }
+      p {
+        margin-left: ratioAsk(190px, $max-width);
+      }
+    }
+    .border-buttom {
+      border-bottom: solid 1px #E7E7E7;
     }
   }
 }

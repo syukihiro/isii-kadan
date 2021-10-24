@@ -23,6 +23,14 @@
   font-weight: 600;
 }
 
+.cook-img {
+  background-image: url(../img/header/menu-header.png);
+}
+
+.hotspring-img {
+  background-image: url(../img/header/onsen-header.png);
+}
+
 .breadcrumbs {
   width: 100%;
   line-height: 2;
@@ -118,4 +126,47 @@
 
 .single .content .menu .left-box p {
   padding-left: 60px;
+}
+
+.effect {
+  margin-top: 8.15104%;
+  border-top: solid 1px #E7E7E7;
+  border-bottom: solid 1px #E7E7E7;
+  text-align: center;
+}
+
+.effect h2 {
+  font-size: 1.625rem;
+  line-height: 1.23;
+  padding-top: 4.81771%;
+}
+
+.effect-box {
+  height: auto;
+  width: 74.576%;
+  margin: 4.11017% auto 6.27119%;
+}
+
+.effect-box__content {
+  font-size: 0.9375rem;
+  line-height: 2.133333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  padding: 9px 0 9px 0;
+  border-top: solid 1px #E7E7E7;
+}
+
+.effect-box__content h3 {
+  width: 6.81818%;
+  white-space: nowrap;
+}
+
+.effect-box__content p {
+  margin-left: 9.89583%;
+}
+
+.effect-box .border-buttom {
+  border-bottom: solid 1px #E7E7E7;
 }
